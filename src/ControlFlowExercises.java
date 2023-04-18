@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main (String[] args){
+        Scanner input = new Scanner(System.in);
+        String choice;
 //        1. Loop Basics
 //        int i = 5;
 //        while (i <= 15) {
@@ -47,16 +49,40 @@ public class ControlFlowExercises {
 //            }
 //        }
 //        3.Display a table of powers.
-        Scanner input = new Scanner(System.in);
-        String choice;
-        do {
-            System.out.print("Enter an integer: ");
-            int n = input.nextInt();
+//
+//        do {
+//            System.out.print("Enter an integer: ");
+//            int n = input.nextInt();
+//
+//            System.out.println("Number\tSquare\tCube");
+//            for (int i = 1; i <= n; i++) {
+//                System.out.println(i + "\t" + (i * i) + "\t" + (i * i * i));
+//            }
+//
+//            System.out.print("Do you want to continue (Y/N)? ");
+//            choice = input.next();
+//        } while (choice.equalsIgnoreCase("Y"));\
 
-            System.out.println("Number\tSquare\tCube");
-            for (int i = 1; i <= n; i++) {
-                System.out.println(i + "\t" + (i * i) + "\t" + (i * i * i));
+//       4. Convert given number grades into letter grades.
+
+        do {
+            System.out.print("Enter a grade number (0-100): ");
+            int grade = input.nextInt();
+
+            char letterGrade;
+            if (grade >= 88 && grade <= 100) {
+                letterGrade = 'A';
+            } else if (grade >= 80 && grade <= 87) {
+                letterGrade = 'B';
+            } else if (grade >= 67 && grade <= 79) {
+                letterGrade = 'C';
+            } else if (grade >= 60 && grade <= 66) {
+                letterGrade = 'D';
+            } else {
+                letterGrade = 'F';
             }
+
+            System.out.println("Letter grade: " + letterGrade);
 
             System.out.print("Do you want to continue (Y/N)? ");
             choice = input.next();

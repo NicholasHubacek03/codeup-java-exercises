@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main (String[] args){
 //        1. Loop Basics
@@ -35,16 +36,30 @@ public class ControlFlowExercises {
 //        }
 
 //        2. Fizzbuzz
-        for (int i = 1; i <= 100; i++) {
-            System.out.println(i);
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            }
-        }
-    }
+//        for (int i = 1; i <= 100; i++) {
+//            System.out.println(i);
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if (i % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else if (i % 3 == 0) {
+//                System.out.println("Fizz");
+//            }
+//        }
+//        3.Display a table of powers.
+        Scanner input = new Scanner(System.in);
+        String choice;
+        do {
+            System.out.print("Enter an integer: ");
+            int n = input.nextInt();
 
+            System.out.println("Number\tSquare\tCube");
+            for (int i = 1; i <= n; i++) {
+                System.out.println(i + "\t" + (i * i) + "\t" + (i * i * i));
+            }
+
+            System.out.print("Do you want to continue (Y/N)? ");
+            choice = input.next();
+        } while (choice.equalsIgnoreCase("Y"));
+    }
 }

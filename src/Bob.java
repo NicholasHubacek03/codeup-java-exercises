@@ -14,7 +14,7 @@ public class Bob {
                 System.out.println("Sure");
             } else if (input.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
-            } else if (input.equals("")) { // can use the .isEmpty() method
+            } else if (input.equals("")) {
                 System.out.println("Fine. Be that way!");
             } else {
                 System.out.println("Whatever.");

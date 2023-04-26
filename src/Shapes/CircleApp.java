@@ -11,7 +11,7 @@ public class CircleApp {
         Circle userCircle = new Circle(userRad);
         System.out.println("area: ");
         System.out.println(userCircle.getArea());
-        System.out.println("circumfereeence: ");
+        System.out.println("circumference: ");
         System.out.println(userCircle.getCircumference());
 
     }
